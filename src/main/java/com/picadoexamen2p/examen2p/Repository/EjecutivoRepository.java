@@ -5,5 +5,5 @@ import org.springframework.data.repository.CrudRepository;
 import com.picadoexamen2p.examen2p.Model.Ejecutivo;
 
 public interface EjecutivoRepository extends CrudRepository<Ejecutivo, String> {
-    Ejecutivo findByCodUsuario(String codUsuarioEjecutivo);
+    Ejecutivo findByCodUsuario(String codEjecutivo);
 }

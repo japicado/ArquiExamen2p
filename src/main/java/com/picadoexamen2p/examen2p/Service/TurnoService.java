@@ -53,10 +53,10 @@ public class TurnoService {
         }
     }
 
-    public void registrarInicioAtencion(String numTurno, String codUsuarioEjecutivo) {
+    public void registrarInicioAtencion(String numTurno, String codEjecutivo) {
         Turno turno = turnoRepository.findByNumTurno(numTurno);
         if (turno != null) {
-            Ejecutivo ejecutivo = ejecutivoRepository.findByCodUsuario(codUsuarioEjecutivo);
+            Ejecutivo ejecutivo = ejecutivoRepository.findByCodUsuario(codEjecutivo);
             if (ejecutivo != null) {
                 turno.setCodEjecutivo(ejecutivo.getCodUsuario());
                 turno.setNombreEjecutivo(ejecutivo.getNombreCompleto());
